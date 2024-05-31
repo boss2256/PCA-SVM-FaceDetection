@@ -46,6 +46,25 @@ Finished capturing images.
 weighted avg       0.99      0.99      0.99        75
 
 ```
+![PCA Face](pca_cluster.png)
+
+## Observations
+
+### Class Separation:
+- The PCA plot shows a clear separation between the two classes (0 and 1).
+- Class 0 (purple) is clustered on the left side of the plot, with values around -3000 to -1000 on the first principal component and near 0 on the second principal component.
+- Class 1 (yellow) is clustered on the right side of the plot, with values around 1000 to 3500 on the first principal component and values up to 10000 on the second principal component.
+
+### Compact Clusters:
+- Both classes form compact clusters, indicating that PCA effectively reduces the dimensionality of the face images while preserving the class distinctions.
+- Class 0 forms a tight cluster with less spread compared to Class 1, which has a wider spread on the second principal component.
+
+### Principal Component Analysis:
+- The first principal component captures most of the variance that differentiates the classes, as shown by the clear horizontal separation.
+- The second principal component also contributes to the class differentiation but to a lesser extent than the first principal component.
+
+These observations indicate that PCA has successfully transformed the high-dimensional face data into a lower-dimensional space where the classes are well-separated, making it easier for the SVM classifier to distinguish between different faces.
+
 
 ## Technical Details
 The system is built using the following steps:
